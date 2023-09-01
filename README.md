@@ -64,10 +64,15 @@ npm run start:dev
 ```
 
 Access Compodoc documentation
-> [localhost:3000/docs/](http://localhost:3000/docs/)
-
-Access Compodoc documentation
 > [localhost:3000/swagger/](http://localhost:3000/swagger/)
+
+
+Run application
+```bash
+npm run start:dev
+```
+Access Compodoc documentation
+> [localhost:8080/](http://localhost:8080/)
 
 
 ## Running the app
