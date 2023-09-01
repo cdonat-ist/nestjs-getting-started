@@ -1,0 +1,29 @@
+version: '3'  
+
+services:
+  app:
+    build: .
+    command: npm run start:dev
+    depends_on:
+      - db
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/app
+
+  db:
+    image: postgres:15
+    restart: always
+    hostname: postgres
+    environment: 
+      POSTGRES_PASSWORD: 12qwaszx
+      POSTGRES_USER: cdonat
+      POSTGRES_DB: getting_started_nestjs
+    ports:
+      -  5432:5432
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+volumes:
+  postgres-data:
+    
